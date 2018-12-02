@@ -1,38 +1,31 @@
 package me.islend.advent;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-public class Day2 {
-	static List<String> input = new ArrayList<String>();
+public class Day2 extends Advent{
 	
 	public static void main(String[] args) throws IOException {
-		
-		getInput();
-		System.out.println("First exercise: " + solveFirst());
-		System.out.println("Second exercise: " + solveSecond());
-
+		new Day2();
 	}
 	
-	private static void getInput() throws NumberFormatException, IOException {
-		BufferedReader reader = new BufferedReader(new FileReader(new File(".", "Day2.txt")));
-		
-		String s;
-		while((s = reader.readLine()) != null) {
-			input.add(s);
-		}
+	protected Day2() throws IOException {
+		super(2);
 	}
 	
-	private static Integer solveFirst() {
+	@Override
+	protected void setup() {
+		
+	}
+	
+	@Override
+	protected Object solveFirst() {
 		
 		int contains2 = 0, contains3 = 0;
-		for(String str : input) {
+		for(String str : getInput()) {
 			List<String> chars = new ArrayList<String>(Arrays.asList(str.split("(?!^)")));
 			
 			Boolean found2 = false;
@@ -55,12 +48,13 @@ public class Day2 {
 		return contains2 * contains3;
 	}
 	
-	private static String solveSecond() {
-		
-		for(String str : input) {
+	@Override
+	protected Object solveSecond() {
+	
+		for(String str : getInput()) {
 			ArrayList<String> chars = new ArrayList<String>(Arrays.asList(str.split("(?!^)")));
 			
-			for(String check : input) {
+			for(String check : getInput()) {
 				ArrayList<String> charscheck = new ArrayList<String>(Arrays.asList(check.split("(?!^)")));
 				
 				int same = 0;
@@ -77,7 +71,7 @@ public class Day2 {
 				}
 			}
 		}
-		
+	
 		return "";
 	}
 }
