@@ -85,7 +85,6 @@ public class Day3 extends Advent{
 			candidate.put(id, candidatepoints);
 		}
 		
-		System.out.println("Candidate amount: " + candidate.size());
 		List<String> idstoremove = new ArrayList<String>();
 		for(String id : candidate.keySet()) {
 			for(Point p : candidate.get(id)) {
@@ -97,8 +96,6 @@ public class Day3 extends Advent{
 				}
 			}
 		
-		
-		System.out.println("Remove: " + candidate.size());
 		for(String removeid : idstoremove) {	
 			candidate.remove(removeid);
 		}
