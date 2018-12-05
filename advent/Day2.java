@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.HashSet;
 import java.util.List;
 
 public class Day2 extends Advent{
@@ -26,7 +27,7 @@ public class Day2 extends Advent{
 		
 		int contains2 = 0, contains3 = 0;
 		for(String str : getInput()) {
-			List<String> chars = new ArrayList<String>(Arrays.asList(str.split("(?!^)")));
+			HashSet<String> chars = new HashSet<>(Arrays.asList(str.split("(?!^)")));
 			
 			Boolean found2 = false;
 			Boolean found3 = false;
@@ -52,10 +53,10 @@ public class Day2 extends Advent{
 	protected Object solveSecond() {
 	
 		for(String str : getInput()) {
-			ArrayList<String> chars = new ArrayList<String>(Arrays.asList(str.split("(?!^)")));
+			List<String> chars = new ArrayList<>(Arrays.asList(str.split("(?!^)")));
 			
 			for(String check : getInput()) {
-				ArrayList<String> charscheck = new ArrayList<String>(Arrays.asList(check.split("(?!^)")));
+				List<String> charscheck = new ArrayList<>(Arrays.asList(check.split("(?!^)")));
 				
 				int same = 0;
 				String fin = "";
