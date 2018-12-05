@@ -1,7 +1,7 @@
 package me.islend.advent;
 
 import java.io.IOException;
-import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -35,7 +35,7 @@ public class Day1 extends Advent{
 	
 	@Override
 	protected Integer solveSecond() {
-		List<Integer> passedfreq = new ArrayList<Integer>();
+		HashSet<Integer> passedfreq = new HashSet<>();
 		
 		Boolean fin = false;
 		int freq = 0;
@@ -51,7 +51,7 @@ public class Day1 extends Advent{
 			}
 		}
 		
-		return null;
+		return freq;
 	}
 }
 
