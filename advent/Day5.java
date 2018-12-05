@@ -16,14 +16,12 @@ public class Day5 extends Advent{
 
 	@Override
 	protected void setup() {
-		// TODO Auto-generated method stub
 	
 		sequence = new StringBuilder(getInput().get(0));
 	}
 
 	@Override
 	protected Object solveFirst() {
-		// TODO Auto-generated method stub
 		
 		return reaction(sequence);
 	}
@@ -31,7 +29,6 @@ public class Day5 extends Advent{
 	@Override
 	protected Object solveSecond() {
 		String alphabet = "abcdefghijklmnopqrstuvwxyz";
-		String lowestletter = "";
 		int lowestamount = Integer.MAX_VALUE;
 		
 
@@ -39,7 +36,7 @@ public class Day5 extends Advent{
 			StringBuilder newseq = new StringBuilder(sequence.toString().replaceAll(String.valueOf(alphabet.charAt(x)), "").replaceAll(String.valueOf(alphabet.charAt(x)).toUpperCase(), ""));
 			lowestamount = Math.min(lowestamount, reaction(newseq));
 		}
-		// TODO Auto-generated method stub
+
 		return lowestamount;
 	}	
 	
