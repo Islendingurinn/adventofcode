@@ -1,4 +1,4 @@
-package me.islend.advent;
+package advent;
 
 import java.io.BufferedReader;
 import java.io.File;

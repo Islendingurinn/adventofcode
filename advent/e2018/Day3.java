@@ -1,4 +1,6 @@
-package me.islend.advent;
+package advent.e2018;
+
+import advent.Advent;
 
 import java.awt.Point;
 import java.io.IOException;
@@ -7,7 +9,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-public class Day3 extends Advent{
+public class Day3 extends Advent {
 
 	private Set<Fabric> fabriclist;
 	private int[][] size;
