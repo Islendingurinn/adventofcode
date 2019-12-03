@@ -27,9 +27,7 @@ public class Day1 extends Advent {
     protected Integer solveFirst() {
 
         int fuel = 0;
-        for (int i = 0; i < parsed.size(); i++) {
-            fuel += Math.round(parsed.get(i) / 3) - 2;
-        }
+        for (Integer integer : parsed) fuel += Math.round(integer / 3) - 2;
 
         return fuel;
     }
@@ -38,15 +36,15 @@ public class Day1 extends Advent {
     protected Integer solveSecond() {
 
         int fuel = 0;
-        for (int i = 0; i < parsed.size(); i++) {
+        for (Integer integer : parsed) {
             boolean keepgoing = true;
-            int calcFuel = Math.round(parsed.get(i) / 3) - 2;
+            int calcFuel = Math.round(integer / 3) - 2;
 
-            while(keepgoing) {
-                if (calcFuel > 0){
+            while (keepgoing) {
+                if (calcFuel > 0) {
                     fuel += calcFuel;
                     calcFuel = Math.round(calcFuel / 3) - 2;
-                }else keepgoing = false;
+                } else keepgoing = false;
             }
         }
 
