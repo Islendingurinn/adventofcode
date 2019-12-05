@@ -71,7 +71,7 @@ public class Day4 extends Advent {
                     break;
                 }
             }
-            
+
             if(m && increments) combinations++;
         }
 

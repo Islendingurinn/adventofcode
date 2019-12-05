@@ -24,9 +24,6 @@ public class Day2 extends Advent {
         for (int i = 0; i < split.length; i++) {
             parsed[i] = Integer.parseInt(split[i]);
         }
-
-        parsed[1] = 12;
-        parsed[2] = 2;
     }
 
     @Override
