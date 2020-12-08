@@ -24,7 +24,7 @@ public class Day8 extends Advent {
     @Override
     protected Object solveFirst() {
 
-        return runScenario(-1);
+        return -runScenario(-1);
 
     }
 
