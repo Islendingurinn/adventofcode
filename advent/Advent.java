@@ -20,8 +20,13 @@ public abstract class Advent {
 		}
 		
 		setup();
-		System.out.println("Part 1: " + solveFirst());
-		System.out.println("Part 2: " + solveSecond());
+		long currentTime = System.currentTimeMillis();
+		System.out.print("Part 1: " + solveFirst());
+		System.out.println(" (" + (System.currentTimeMillis() - currentTime) + " ms)");
+
+		currentTime = System.currentTimeMillis();
+		System.out.print("Part 2: " + solveSecond());
+		System.out.println(" (" + (System.currentTimeMillis() - currentTime) + " ms)");
 	}
 	
 	public List<String> getInput() {
