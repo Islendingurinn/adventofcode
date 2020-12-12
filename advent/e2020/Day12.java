@@ -23,7 +23,6 @@ public class Day12 extends Advent {
         directions = new ArrayList<>(Arrays.asList('N', 'E', 'S', 'W'));
     }
 
-    //wrong 1277
     @Override
     protected Object solveFirst() {
 
