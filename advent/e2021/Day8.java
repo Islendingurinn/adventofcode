@@ -88,8 +88,8 @@ public class Day8 extends Advent {
                 length 6: 0, 6, 9
 
                 length five has two interesting traits:
-                2 has position 'e' unique to 3, 5
-                5 has position 'b' unique to 3, 5
+                2 has position 'e' unique
+                5 has position 'b' unique
 
                 length six has three interesting traits
                 0 has position 'd' missing
