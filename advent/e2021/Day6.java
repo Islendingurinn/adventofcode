@@ -81,7 +81,6 @@ public class Day6 extends Advent {
 
     @Override
     protected Object solveSecond() {
-        setup();
         run(256);
         return count();
     }

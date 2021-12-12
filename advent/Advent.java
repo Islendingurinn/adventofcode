@@ -9,7 +9,7 @@ import java.util.List;
 
 public abstract class Advent {
 	
-	private List<String> input = new ArrayList<String>();
+	private List<String> input = new ArrayList<>();
 	
 	protected Advent(int day) throws IOException {
 		BufferedReader reader = new BufferedReader(new FileReader(new File(".", "Day" + day + ".txt")));
@@ -24,6 +24,7 @@ public abstract class Advent {
 		System.out.print("Part 1: " + solveFirst());
 		System.out.println(" (" + (System.currentTimeMillis() - currentTime) + " ms)");
 
+		setup();
 		currentTime = System.currentTimeMillis();
 		System.out.print("Part 2: " + solveSecond());
 		System.out.println(" (" + (System.currentTimeMillis() - currentTime) + " ms)");
